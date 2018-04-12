@@ -1,0 +1,11 @@
+# for Mac OS
+.DS_Store
+
+# executables
+*.exe
+
+# submission files
+*.zip
+
+# handout materials
+handout/
