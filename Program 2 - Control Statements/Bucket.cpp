@@ -7,13 +7,13 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-Bucket::Bucket(int v) {
-    this->volume = v;
-    this->water = 0;
-    this->color = "Red";
+Bucket::Bucket(const int v) {
+    volume = v;
+    water = 0;
+    color = "Red";
 }
 
-void Bucket::fill(int w) {
+void Bucket::fill(const int w) {
     if(w <= 0) {
         cout << "No water is filled." << endl;
         return;
@@ -29,7 +29,7 @@ void Bucket::fill(int w) {
     }
 }
 
-void Bucket::pour(int w) {
+void Bucket::pour(const int w) {
     if(w <= 0) {
         cout << "No water is poured." << endl;
         return;
@@ -62,47 +62,46 @@ void Bucket::empty() {
 
 void Bucket::manip() {
     char c;
-    while(hint(), cin >> c) {
+    while(static_cast<void>(hint()), cin >> c) { // prompt command guide, wait for input
         switch(c) {
-            case 'p':
+            case 'p': // pour
             {
                 cout << "input pour water:" << endl;
                 int w;
                 cin >> w;
-                this->pour(w);
+                pour(w);
                 break;
             }
-            case 'f':
+            case 'f': // fill
             {
                 cout << "input fill water:" << endl;
                 int w;
                 cin >> w;
-                this->fill(w);
+                fill(w);
                 break;
             }
-            case 'r':
+            case 'r': // replenish
             {
-                this->replenish();
+                replenish();
                 break;
             }
-            case 'e':
+            case 'e': // empty
             {
-                this->empty();
+                empty();
                 break;
             }
-            case 'c':
+            case 'c': // change color
             {
-                std::string c;
+                std::string newColor;
                 cout << "input color:" << endl;
-                cin >> c;
-                this->paint(c);
+                if(cin >> newColor) { paint(newColor); }
                 break;
             }
-            case 'q':
+            case 'q': // quit
             {
                 return;
             }
-            default:
+            default: // invalid input
             {
                 continue;
             }
@@ -116,9 +115,9 @@ void Bucket::hint() {
          << "'r': replenish  'e': empty    'q': quit" << endl;
 }
 
-void Bucket::paint(std::string c) {
+void Bucket::paint(const std::string c) {
     color = c;
-    color[0] = toupper(color[0]);
+    color[0] = std::toupper(color[0]);
 }
 
 void Bucket::show() {
