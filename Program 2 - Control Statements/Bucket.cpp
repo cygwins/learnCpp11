@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 #include "Bucket.h"
 
 using std::cin;
@@ -18,8 +19,8 @@ void Bucket::fill(int w) {
         return;
     }
     if(water + w > volume) {
-        int f = volume - w; // actual fill
-        cout << "Bucket is full, only" << f << "L water filled." << endl;
+        int f = volume - water; // actual fill
+        cout << "Bucket is full, only " << f << "L water filled." << endl;
         water = volume;
     }
     else {
@@ -34,7 +35,7 @@ void Bucket::pour(int w) {
         return;
     }
     if(water < w) {
-        cout << "Not enough water, only" << water << "L water poured." << endl;
+        cout << "Not enough water, only " << water << "L water poured." << endl;
         water = volume;
     }
     else {
@@ -84,6 +85,19 @@ void Bucket::manip() {
                 this->replenish();
                 break;
             }
+            case 'e':
+            {
+                this->empty();
+                break;
+            }
+            case 'c':
+            {
+                std::string c;
+                cout << "input color:" << endl;
+                cin >> c;
+                this->paint(c);
+                break;
+            }
             case 'q':
             {
                 return;
@@ -98,13 +112,15 @@ void Bucket::manip() {
 }
 
 void Bucket::hint() {
-    cout << "'f': fill, 'p': pour, 'r': replenish, 'e': empty, 'q': quit" << endl;
+    cout << "'f': fill       'p': pour     'c': change color" << endl
+         << "'r': replenish  'e': empty    'q': quit" << endl;
 }
 
 void Bucket::paint(std::string c) {
-    this->color = c;
+    color = c;
+    color[0] = toupper(color[0]);
 }
 
 void Bucket::show() {
-    cout << this->color << "bucket with " << this->water << "L water in it." << endl;
+    cout << color << " bucket with " << water << "L water in it." << endl;
 }

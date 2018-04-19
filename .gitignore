@@ -3,6 +3,7 @@
 
 # executables
 *.exe
+*.out
 
 # submission files
 *.zip

@@ -10,8 +10,8 @@
 ******/
 #include <iostream>
 #include "Bucket.h"
-
 int main() {
+    std::cout << "A red bucket of 10 volume is created by default." << std::endl;
     Bucket b(10);
     b.manip();
     return 0;
