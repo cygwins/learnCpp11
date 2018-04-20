@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <cctype>
 #include "Bucket.h"
 
 using std::cin;
@@ -116,9 +115,21 @@ void Bucket::hint() {
 
 void Bucket::paint(const std::string c) {
     color = c;
-    color[0] = std::toupper(color[0]);
 }
 
 void Bucket::show() {
-    cout << color << " bucket with " << water << "L water in it." << endl;
+    cout << volume << "L " << color << " bucket with "
+         << water << "L water in it." << endl;
+}
+
+int Bucket::getWater() {
+    return water;
+}
+
+int Bucket::getVolume() {
+    return volume;
+}
+
+std::string Bucket::getColor() {
+    return color;
 }

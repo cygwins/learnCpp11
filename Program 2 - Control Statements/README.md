@@ -1,13 +1,39 @@
 ## Assignment 2 - Control Statements
 
-This assignment implements a class `Bucket` with 3 attributes `volume`, `water`, and `color`, a constructor for the class, a member function `paint` to set the attribute `color`, a `show` to describe the object by its attributes.
+#### Program Discription
 
-An instance of `Bucket` is able to fill up with water and/or pour out water, with the `if`-`else` control statements to validate the parameter and behave accordingly;
+This program applies various C++ control statements by implementing a class `Bucket`, whose instances can hold a certain amount of water and can add to/substract from that amount. The class has a member function which allows user enter an interactive mode to manipulate on the object.
 
-it is also able to be fully replenished or thoroughly emptied, using `for`-loops.
+#### Checklist
 
-The class has a method `manip` to manipulate the object in an interactive way.
+Specification  |Implementation 
+---------------|---------------
+class          |`Bucket`
+constructor(s) |`default` and init with volume
+attribute 1    |`volume`
+attribute 2    |`water`
+attribute 3    |`color`
+set function   |`paint` (sets `color`)
+get function   |each attr has getter
+display func   |`show`
+`for`-loop     |in `replenish` & `empty`
+`while`-loop   |in `manip`
+`continue`     |in `while`-loop in `manip`
+`if`-`else`    |validation in `fill` & `pour`
+`switch`       |handle command in `manip`
 
-In `manip`, `switch` control statement is used to determine action by user input, in a `while`-loop with a `continue`.
+#### File list
 
+Bucket.h : class header
 
+Bucket.h.cpp : class implementation
+
+testBucket.h.cpp : drive program
+
+README.md : this report
+
+demo.png : output demo 
+
+#### Output demonstration
+
+![alt text](./demo.png "demo")

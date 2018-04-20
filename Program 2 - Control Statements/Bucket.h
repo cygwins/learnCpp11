@@ -14,9 +14,12 @@ public:
     void paint(const std::string); // change appearance
     void show(); // show color and remaining water
     void hint(); // show manual
+    int getWater();
+    int getVolume();
+    std::string getColor();
 
 private:
-    int volume;
+    const int volume;
     int water;
     std::string color;
 };
