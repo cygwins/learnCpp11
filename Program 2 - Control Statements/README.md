@@ -24,15 +24,11 @@ display func   |`show`
 
 #### File list
 
-Bucket.h : class header
-
-Bucket.cpp : class implementation
-
-testBucket.cpp : drive program
-
-README.md : this report
-
-demo.png : output demo 
+- Bucket.h : class header
+- Bucket.cpp : class implementation
+- testBucket.cpp : drive program
+- README.md : this report
+- demo.png : output demo 
 
 #### Output demonstration
 
