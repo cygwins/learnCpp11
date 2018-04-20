@@ -26,9 +26,9 @@ display func   |`show`
 
 Bucket.h : class header
 
-Bucket.h.cpp : class implementation
+Bucket.cpp : class implementation
 
-testBucket.h.cpp : drive program
+testBucket.cpp : drive program
 
 README.md : this report
 
