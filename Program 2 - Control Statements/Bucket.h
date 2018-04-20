@@ -5,7 +5,7 @@
 class Bucket {
 public:
     Bucket() = default;
-    Bucket(const int v); // construct with volume
+    Bucket(const int); // construct with volume
     void fill(const int);
     void pour(const int);
     void replenish();
