@@ -7,8 +7,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-Bucket::Bucket(const int v) {
-    volume = v;
+Bucket::Bucket(const int v) : volume(v) {
     water = 0;
     color = "Red";
 }
