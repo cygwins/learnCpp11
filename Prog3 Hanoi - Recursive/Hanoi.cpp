@@ -36,7 +36,7 @@ void Hanoi::init() {
     step = 0;
 }
 
-void Hanoi::display() {
+void Hanoi::display() { // print all disks
     for(int p = 0; p < 3; ++p) {
         cout << "peg " << peg[p] << ":";
         for(int d = 0; disk[p][d]; ++d) {
@@ -48,21 +48,21 @@ void Hanoi::display() {
 
 int Hanoi::solve(int pegInit, int pegGoal, int height) {
     // solve: move top height disks at initial peg to goal peg
-	if(height == 1) { // trivia case: moving only top disk
-		return move(pegInit, pegGoal);
+    if(height == 1) { // trivia case: moving only top disk
+        return move(pegInit, pegGoal);
     }
-	else {
+    else {
         int pegOther = 3 - pegInit - pegGoal; // spare peg, 0 + 1 + 2 = 3
-		if(solve(pegInit, pegOther, height - 1) == -1) { // move upper tower besides base
+        if(solve(pegInit, pegOther, height - 1) == -1) { // move upper tower besides base
             return -1; // pass on failure
         }
-		if(solve(pegInit, pegGoal, 1) == -1) { // move the base to goal
+        if(solve(pegInit, pegGoal, 1) == -1) { // move the base to goal
             return -1; // pass on failure
         }
-		if(solve(pegOther, pegGoal, height - 1) == -1) { // move upper back
+        if(solve(pegOther, pegGoal, height - 1) == -1) { // move upper back
             return -1;
         } // could be rewrite with try-catch block
-	}
+    }
     return 0;
 }
 
