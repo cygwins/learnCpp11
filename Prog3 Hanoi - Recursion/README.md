@@ -26,11 +26,15 @@ id visibility  |`solve(..)`<sup>2</sup>
 
 #### File list
 
-- Hanoi.h : class header
-- Hanoi.cpp : class implementation
-- testHanoi.cpp : drive program
-- README.md : this report
-- demo.png : output demo
+Hanoi.h : class header
+
+Hanoi.cpp : class implementation
+
+testHanoi.cpp : drive program
+
+README.md : this report
+
+demo.png : output demo
 
 #### Output demonstration
 
