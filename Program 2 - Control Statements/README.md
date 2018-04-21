@@ -32,4 +32,4 @@ display func   |`show`
 
 #### Output demonstration
 
-![alt text](https://github.com/cygwins/learnCpp11/blob/master/Program%202%20-%20Control%20Statements/demo.png "demo")
+![alt text](https://github.com/cygwins/learnCpp11/blob/master/Program%202%20-%20Control%20Statements/demo.png?raw=true "demo")
