@@ -32,4 +32,4 @@ display func   |`show`
 
 #### Output demonstration
 
-![demo](https://github.com/cygwins/learnCpp11/blob/master/Prog2%20Bucket%20-%20Control%20Statements/demo.png?raw=true =500 "demo")
+![demo](https://github.com/cygwins/learnCpp11/blob/master/Prog2%20Bucket%20-%20Control%20Statements/demo.png?raw=true | height=500)

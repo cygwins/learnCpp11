@@ -34,7 +34,7 @@ id visibility  |`solve(..)`<sup>2</sup>
 
 #### Output demonstration
 
-![demo](https://github.com/cygwins/learnCpp11/blob/master/Prog3%20Hanoi%20-%20Recursion/demo.png?raw=true =400 "demo")
+![demo](https://github.com/cygwins/learnCpp11/blob/master/Prog3%20Hanoi%20-%20Recursion/demo.png?raw=true | height=400)
 
 #### Note
 
