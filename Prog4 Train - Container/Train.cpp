@@ -53,7 +53,7 @@ Goods::~Goods() {
 void Goods::init() {
     trim(name);
 #ifdef VERBOSE
-    std::cout << "Person obj '" << getName()
+    std::cout << "Goods obj '" << getName()
         << "' at " << this << " initialized." << std::endl;
 #endif
 }
@@ -69,8 +69,7 @@ void Cabin::init() {
         seats.reserve(32 - headCount());
     }
 #ifdef VERBOSE
-    std::cout << "Cabin obj '"
-        << "' at " << this << " initialized." << std::endl;
+    std::cout << "Cabin obj at " << this << " initialized." << std::endl;
 #endif
 }
 

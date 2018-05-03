@@ -27,5 +27,6 @@ int main() {
     Person *mech = new Person("Jerry", Title("Mechanic"));
     Train myTrain("Hope");
     myTrain.addCrew(*mech).append(SpaceX).prepend(WA).append(spare).show(std::cout);
+    delete mech;
     return 0;
 }
