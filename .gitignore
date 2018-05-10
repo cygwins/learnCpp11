@@ -7,6 +7,7 @@
 
 # submission files
 *.zip
+*.txt
 
 # handout materials
 handout/
