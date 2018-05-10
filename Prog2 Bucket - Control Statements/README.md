@@ -1,6 +1,6 @@
 ## Assignment 2 - Control Statements
 
-#### Program Discription
+#### Program Description
 
 This program applies various C++ control statements by implementing a class `Bucket`, whose instances can hold a certain amount of water and can add to/substract from that amount. The class has a member function which allows user enter an interactive mode to manipulate on the object.
 

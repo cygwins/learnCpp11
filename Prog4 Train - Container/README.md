@@ -1,6 +1,6 @@
 ## Assignment 4 - Container
 
-#### Program Discription
+#### Program Description
 This program implement a container class `Train` consists of crew and `cabin`s which can hold many `Goods` or `Person` with `Title`. Member functions such as `append` and `show` return `*this`, so users can call them in sequence on an object like `trainObj.append(newCab).show(cout)`.
 
 #### Checklist

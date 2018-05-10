@@ -1,6 +1,6 @@
 ## Assignment 3 - Recursive Function, Pointer, Array
 
-#### Program Discription
+#### Program Description
 
 This program applies recursive function, pointers and arrays to implement a class `Hanoi`. The class prints out step-by-step guide to solve a [Tower of Hanoi puzzle](https://en.wikipedia.org/wiki/Tower_of_Hanoi).
 

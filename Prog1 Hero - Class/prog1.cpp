@@ -6,7 +6,7 @@
 * Term : Spring, 2018
 * Assignment : Program 1
 * Due date : April 11, 2018
-* Discription :
+* Description :
 *     This program implements a class "Hero", 
 *     with constructors to the class, 
 *     an attribute "name", and member functions

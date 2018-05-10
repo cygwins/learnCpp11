@@ -1,6 +1,6 @@
 ## Assignment 5 - Operator Overload
 
-#### Program Discription
+#### Program Description
 
 This program implement three class `FracN` (fraction numbers), `CplxN` (complex numbers), and `Mod7N` (modulo 7 numbers). 
 
@@ -9,7 +9,7 @@ They all share the overloaded arithmetic operators (`+`, `-`, `*`, and `/`) acco
 They all have a conversion (cast) operator `int()`. `FracN` will return the truncated integer of that fraction number, `CplxN` will return the truncated length of the vector on complex plane representing that complex number, and `Mod7N` will return the modulo numer itself as an integer.
 
 
-#### Program Discription
+#### Output Demonstration
 ```cpp                                                                                  
 FracN fa(4, 12), fb(3, 6);
 cout << fa << " + " << fb << " = " << fa + fb << endl;
