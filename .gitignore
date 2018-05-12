@@ -8,6 +8,8 @@
 # submission files
 *.zip
 *.txt
+*.doc
+*.docx
 
 # handout materials
 handout/
