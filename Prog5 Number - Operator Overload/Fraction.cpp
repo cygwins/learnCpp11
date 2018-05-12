@@ -43,9 +43,8 @@ Fraction operator/(const Fraction &a, const Fraction &b) {
 int gcd(int a, int b) { return b == 0 ? abs(a) : gcd(abs(b), abs(a) % abs(b)); }
 
 void Fraction::simplify() { // eliminate common divider of numerator and denominator
-    int d = gcd(this->num, this->denom);
+    int d = ::gcd(this->num, this->denom);
     if(this->denom < 0) { d *= -1; }
     this->num /= d;
     this->denom /= d;
 }
-
