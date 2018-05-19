@@ -29,7 +29,7 @@ making `Unit` an abstract class. However, `UndeadDragon` may not know which pare
          Unit
         ^    ^
       /        \
-Undead     Dragon
+   Undead     Dragon
       ^        ^
        \      /
       UndeadDragon
