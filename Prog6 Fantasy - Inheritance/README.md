@@ -25,13 +25,15 @@ making `Unit` an abstract class. However, `UndeadDragon` may not know which pare
 
 - 4 classes in total, 3 derived classes, one of which is derived from a derived class.
 
- ```mermaid
-graph BT
-UndeadDragon --> Undead
-UndeadDragon --> Dragon
-Undead --> Unit
-Dragon --> Unit
-```
+ ```
+         Unit
+        ^    ^
+      /        \
+Undead     Dragon
+      ^        ^
+       \      /
+      UndeadDragon
+ ```
 
 - Explicit constructor and destructor in base and derived class, derived class constructor override base class constructor
 
