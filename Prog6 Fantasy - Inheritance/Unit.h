@@ -10,6 +10,7 @@
 ******/
 #ifndef UNIT_H_
 #define UNIT_H_
+#include <string>
 
 class Unit {
 public:
