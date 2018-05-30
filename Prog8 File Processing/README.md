@@ -9,8 +9,12 @@ In this project, I demonstrate sequential access and random access file processi
 File streaming in and out are just like regular stream operator. In `demoIn` and `demoOut`, with the overloaded `<<` or `>> ` we can easily write to or read from a file. The `tellp` and `tellg` functions help us show the put pointer and get pointer position.
 
 In `demoDataType` I showed how random access works in file. The key lines are:
+
+```cpp
 book.seekp(0L, std::ios::beg);
 book.write(reinterpret_cast<char*>(&f), sizeof(Friend));
+```
+
 `seekp` and `seekg` change the position of putter and getter to desired place, the `beg` flag dictate how the position is calculated. After getting the pointer to correct places, `write` and `read` with the `reinterpret_cast<char*>` treats all types of data as if they are `char`, and with the help of `sizeof` they could be handle correctly.
 
 #### Overview of Key Elements
