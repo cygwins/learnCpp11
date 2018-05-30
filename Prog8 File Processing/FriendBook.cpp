@@ -16,7 +16,7 @@
 
 FriendBook::FriendBook(const std::string &name) : bookName(name) {
     book.open(bookName, std::ios::in | std::ios::out | std::ios::binary); // ate does not work
-    std::cout << !book << std::endl;
+    // std::cout << !book << std::endl;
     if(!book) {
         std::cerr << "Fail to open file '" << bookName << "'." << std::endl;
         exit(EXIT_FAILURE); // need to #include <cstdlib>
@@ -69,21 +69,21 @@ int FriendBook::enterChoice() {
 void FriendBook::newFriend() {
     book.clear(); // write may fail if badbit/failbit set
     size_t friendId = getFriendId("Enter new friend ID number"); // id to create
-    std::cout << "g=" << book.tellg() << std::endl;
+    // std::cout << "g=" << book.tellg() << std::endl;
     book.seekg((friendId - 1) * sizeof(Friend), std::ios::beg); // file get-pointer to correct position
-    std::cout << "g=" << book.tellg() << std::endl;
+    // std::cout << "g=" << book.tellg() << std::endl;
     Friend f;
     book.read(reinterpret_cast<char*>(&f), sizeof(Friend)); // check if id exist
-    std::cout << "g=" << book.tellg() << std::endl;
+    // std::cout << "g=" << book.tellg() << std::endl;
     if(f.getId() == 0) { // create only if not exist before
         f.setId(friendId);
         input(f);// input
         // write
-        std::cout << "p=" << book.tellp() << std::endl;
+        // std::cout << "p=" << book.tellp() << std::endl;
         book.seekp((friendId - 1) * sizeof(Friend), std::ios::beg);
-        std::cout << "p=" << book.tellp() << std::endl;
+        // std::cout << "p=" << book.tellp() << std::endl;
         book.write(reinterpret_cast<char*>(&f), sizeof(Friend));
-        std::cout << "p=" << book.tellp() << std::endl;
+        // std::cout << "p=" << book.tellp() << std::endl;
         showFriend(std::cout, friendId);
     }
     else {
