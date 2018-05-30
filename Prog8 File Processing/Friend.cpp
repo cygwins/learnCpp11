@@ -8,6 +8,9 @@
 * Due date : May 30, 2018
 *
 ******/
+#include <iostream>
+#include <sstream>
+#include <iomanip>
 #include <string>
 #include "Friend.h"
 
@@ -28,15 +31,15 @@ Friend::Friend(const size_t i,
 
 void Friend::setId(const size_t i) { id = i; }
 
-size_t Friend::getId() { return id; }
+size_t Friend::getId() const { return id; }
 
 void Friend::setName(const std::string &n) { name = n; }
 
-std::string Friend::getName() { return name; }
+std::string Friend::getName() const { return name; }
 
 void Friend::setBirthMonth(const int mon) { birthMonth = mon; }
 
-std::string Friend::getBirthMonth() {
+std::string Friend::getBirthMonth() const {
     switch(birthMonth) {
         case 1: return "Jan";
         case 2: return "Feb";
@@ -56,16 +59,35 @@ std::string Friend::getBirthMonth() {
 
 void Friend::setBirthDay(const int day) { birthDay = day; }
 
-int Friend::getBirthDay() { return (birthDay > 0 && birthDay < 100) ? birthDay : 0; }
+int Friend::getBirthDay() const { return (birthDay > 0 && birthDay < 100) ? birthDay : 0; }
 
 void Friend::setGender(const char sex) { gender = sex; }
 
-char Friend::getGender() { return gender; }
+char Friend::getGender() const { return gender; }
 
 void Friend::setHasPet(const bool pet) { hasPet = pet; }
 
-bool Friend::getHasPet() { return hasPet; }
+bool Friend::getHasPet() const { return hasPet; }
 
 void Friend::setPower(const double pwr) { power = pwr; }
 
-double Friend::getPower() { return power; }
+double Friend::getPower() const { return power; }
+
+std::string Friend::str() const {
+    std::ostringstream s;
+    s << std::left
+      << std::setw(3) << "#"
+      << std::setw(15) << "Name"
+      << std::setw(7) << "Gender"
+      << std::setw(10) << "Birthday"
+      << std::setw(10) << "Pet"
+      << std::setw(10) << "Power" << std::endl;
+    s << std::setw(3) << id
+      << std::setw(15) << name
+      << std::setw(7) << gender
+      << std::setw(5) << getBirthMonth() << std::setw(5) << birthDay
+      << std::setw(10) << std::boolalpha << hasPet << std::noboolalpha
+      << std::setw(11) << std::scientific << std::setprecision(2)
+                       << std::right << power << std::endl;
+    return s.str();
+}

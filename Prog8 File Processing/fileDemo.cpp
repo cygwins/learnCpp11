@@ -12,7 +12,6 @@
 #include <fstream>
 #include <cstdlib> // exit status
 #include <string>
-#include "Friend.h"
 #include "FriendBook.h"
 
 void demoIn(); // demo sequential in file stream
@@ -52,7 +51,7 @@ void demoOut() { // demo sequential out file stream
     }
     out.seekp(0L, std::ios::beg);
     std::cout << "put=" << out.tellp() << std::endl; // 0
-    out << "12345\n";
+    out << "12345";
     std::cout << "put=" << out.tellp() << std::endl; // 5
     out.seekp(1L, std::ios::beg);
     std::cout << "put=" << out.tellp() << std::endl; // 1
@@ -62,11 +61,10 @@ void demoOut() { // demo sequential out file stream
 }
 
 void demoDataType() { // demo different data types in binary file
-    std::fstream book("friend.dat", std::ios::in | std::ios::out | std::ios::binary);
-    if(!book) {
-        std::cerr << "Fail to open file 'friend.dat'." << std::endl;
-        exit(EXIT_FAILURE);
-    }
-    unsigned a = -1;
-    book.write(reinterpret_cast<const char*>(&a), sizeof(a));
+    // std::fstream f("friend.dat", std::ios::in | std::ios::out | std::ios::binary);
+    // int i = 5;
+    // f.write(reinterpret_cast<const char*>(&i), sizeof(int));
+    // f.close();
+    FriendBook best("friend.dat");
+    best.interactive();
 }

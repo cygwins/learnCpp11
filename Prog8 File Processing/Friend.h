@@ -10,6 +10,8 @@
 ******/
 #ifndef FRIEND_H_
 #define FRIEND_H_
+#include <iostream>
+#include <sstream>
 #include <string>
 
 class Friend {
@@ -25,19 +27,20 @@ public:
 
     // setters and getters
     void setId(const size_t);
-    size_t getId();
+    size_t getId() const;
     void setName(const std::string&);
-    std::string getName();
+    std::string getName() const;
     void setBirthMonth(const int);
-    std::string getBirthMonth();
+    std::string getBirthMonth() const;
     void setBirthDay(const int);
-    int getBirthDay();
+    int getBirthDay() const;
     void setGender(const char);
-    char getGender();
+    char getGender() const;
     void setHasPet(const bool);
-    bool getHasPet();
+    bool getHasPet() const;
     void setPower(const double);
-    double getPower();
+    double getPower() const;
+    std::string str() const; // output everything
 
 private:
     size_t id;

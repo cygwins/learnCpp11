@@ -20,14 +20,16 @@ public:
     FriendBook(const std::string &bookName = "myFriends.dat");
     ~FriendBook();
     int enterChoice();
+    void interactive();
     void newFriend();
     void updateFriend();
     void deleteFriend();
-    void showFriend(std::ostream, const Friend&);
+    void showFriend(std::ostream&, size_t = 0);
     size_t getFriendId(const char *const);
     enum Choices { SHOW = 1, NEW = 2, UPDATE = 3, DELETE = 4, END = 5};
 private:
     std::string bookName;
     std::fstream book;
+    void input(Friend&);
 };
 #endif
